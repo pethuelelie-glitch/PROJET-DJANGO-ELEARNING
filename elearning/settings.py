@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    
-    'monelearning.apps.MonelearningConfig',
     'base.apps.BaseConfig',
+    'monelearning.apps.MonelearningConfig',
+    
     
 
 ]
@@ -61,6 +61,7 @@ ROOT_URLCONF = 'elearning.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        
         'DIRS': [
             BASE_DIR / 'templates'
         ],
@@ -127,3 +128,10 @@ STATIC_URL = 'static/'
 STATIFCFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = '1025'
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
